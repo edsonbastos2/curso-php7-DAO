@@ -6,7 +6,20 @@ $usuario = $sql->select("SELECT * FROM tb_usuarioa");
 
 echo json_encode($usuario);*/
 
-$root = new Usuario();
-$root->loadById(4);
-echo $root;
+// Carrega um usuario
+//$root = new Usuario();
+//$root->loadById(4);
+//echo $root;
+
+//Carrega uma lista de usuario
+//$lista = Usuario::getList();
+//echo json_encode($lista);
+
+//Carrega uma lista de usuarios buscando pelo login 
+//$search = Usuario::search("ed");
+//echo json_encode($search);
+
+$login = new Usuario();
+$login->login("edson","redhot");
+echo $login;
 ?>
