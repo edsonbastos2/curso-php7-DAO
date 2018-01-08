@@ -19,7 +19,20 @@ echo json_encode($usuario);*/
 //$search = Usuario::search("ed");
 //echo json_encode($search);
 
-$login = new Usuario();
-$login->login("edson","redhot");
-echo $login;
+//$login = new Usuario();
+//$login->login("edson","redhot");
+//echo $login;
+
+/*Criando um novo usuario
+
+$aluno = new Usuario("user","root");
+$aluno->insert();
+
+echo $aluno;
+*/
+
+$usuario = new Usuario();
+$usuario->loadById(7);
+$usuario->update("Admin", "p@ssw0rd");
+echo $usuario;
 ?>
