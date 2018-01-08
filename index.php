@@ -31,8 +31,15 @@ $aluno->insert();
 echo $aluno;
 */
 
+/*Altera o usuario
 $usuario = new Usuario();
 $usuario->loadById(7);
 $usuario->update("Admin", "p@ssw0rd");
+echo $usuario;
+*/
+
+$usuario = new Usuario();
+$usuario->loadById(7);
+$usuario->delete();
 echo $usuario;
 ?>
